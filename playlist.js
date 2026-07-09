@@ -7,6 +7,8 @@ function Playlist(name) {
   this.currentSong = null;
 }
 
+// prototypes using `this` it refers to the specific instance calling the method
+
 // basic function pushing a songTitle to the songs array
 Playlist.prototype.addSong = function(songTitle) {
   this.songs.push(songTitle);
@@ -21,6 +23,10 @@ Playlist.prototype.playFirst = function() {
   }
 };
 
+// assuming there is more than one song so a song skip can even happen
+// the array is shifted so the 2nd item becomes the first
+// then that song being the first index now becomes currentSong
+// then console log for both if cases
 Playlist.prototype.skipSong = function() {
   if (this.songs.length > 1) {
     this.songs.shift();
