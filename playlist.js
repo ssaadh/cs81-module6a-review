@@ -52,3 +52,13 @@ myMix.addSong("Evening Jazz");
 myMix.playFirst();
 myMix.skipSong();
 myMix.listSongs();
+
+// STEP 4: Improvement
+// Deleting the song in skipSong is a bit too hardcore. It would make more sense to have 
+// a counter that is iterated and then that index of song is chosen
+
+// STEP 5: My own function
+Playlist.prototype.resetSong = function() {
+  this.currentSong = null;
+  console.log(`Playlist "${this.name}" is cleared.`);
+};
