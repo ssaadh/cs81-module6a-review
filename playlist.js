@@ -37,12 +37,14 @@ Playlist.prototype.skipSong = function() {
   }
 };
 
+// basic function logging the name
+// and a printed list of songs separated by a comma
 Playlist.prototype.listSongs = function() {
   console.log("Playlist:", this.name);
   console.log("Songs:", this.songs.join(", "));
 };
 
-
+// test cases for the code
 let myMix = new Playlist("My Chill Mix");
 myMix.addSong("Lofi Study");
 myMix.addSong("Chillhop Beats");
